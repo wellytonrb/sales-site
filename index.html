@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellyton Designer</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/logo/Logo.png" type="Icone Logo">
+  </head>
+  <body class="bg-zinc-200 flex flex-col">
+
+    <section id="carrinho"
+    class="fixed top-0 right-[-360px] bg-zinc-800 h-screen w-[360px] text-white z-50 duration-200 border-l border-green-500 p-7 flex-col justify-between">
+ 
+    <div id="cabecalho-carrinho" class="flex justify-between m-4" >
+      <p>Meu carrinho</p>
+      <button id="fechar-carrinho">
+        <i class="fa-solid fa-circle-xmark hover:text-slate-400"></i>
+      </button> 
+    </div>
+
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
+      <article class="flex bg-zinc-200 rounded-xl relative">
+      </article>
+    </section>
+    <h1> </h1>
+    <p id="preco-total" class="bg-slate-200 text-green-700 rounded-md pl-5">Total: R$200</p>
+    <br>
+    <button class="m-5 bg-green-500 text-black p-2 rounded-lg hover:bg-green-700" id="finalizar-compra">Finalizar Compra</button>
+
+  </section>
+    <header class="flex text-xl bg-zinc-800 shadow-black shadow-lg h-19 px-10 justify-between sticky top-0 z-10">
+      <a href="/">
+      <img
+        class="h-14 pt-2 "
+        src="./assets/logo/Logo.png"
+        alt="Logo do Magazine Hashtag."
+      />
+    </a>
+      <div class="text-white flex gap-2 items-end mx-2 py-5">
+        <button id="abrir-carrinho" class="mx-2">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <a href="/pedidos.html">
+        <button class="mr-2"><i class="fa-solid fa-user"></i></button>
+      </a>
+      </div>
+    </header>
+    <main class="flex flex-col items-center">
+      <section id="filtros" class="p-10 flex ">
+        <div class="px-2">
+        <input
+        id='exibir-todos'
+        type="radio"
+        name="filtro"
+        class="peer hidden"
+        checked />
+
+        <label for="exibir-todos" class="peer-checked:bg-green-700 peer-checked:text-slate-200 peer-checked:font-bold rounded-md p-1 select-none cursor-pointer">Todos</label>
+        </div>
+        
+        <div class="px-2">
+        <input
+        id='exibir-masculinos'
+        type="radio" name="filtro"
+        class="peer hidden"/>
+        
+        <label for="exibir-masculinos" class="peer-checked:bg-green-700 peer-checked:text-slate-200 peer-checked:font-bold rounded-md p-1 select-none cursor-pointer" >Masculinos</label>
+        </div>
+
+        <div class="px-2">
+        <input
+        id='exibir-femininos'
+        type="radio"
+        name="filtro" 
+        class="peer hidden"/>
+
+        <label for="exibir-femininos" class="peer-checked:bg-green-700 peer-checked:text-slate-200 peer-checked:font-bold rounded-md p-1 select-none cursor-pointer" >Femininos</label>
+        </div>
+      </section>
+
+      <section id="container-produto" class=" flex flex-wrap p-10 justify-center gap-6 "></section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
